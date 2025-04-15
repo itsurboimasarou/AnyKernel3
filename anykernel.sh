@@ -34,12 +34,11 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 
 ## AnyKernel install
 dump_boot;
-flash_dtbo;
 write_boot;
 ## end install
 
 ## vendor_boot shell variables
-block=/dev/block/bootdevice/by-name/vendor_boot;
+block=vendor_boot;
 is_slot_device=1;
 ramdisk_compression=auto;
 patch_vbmeta_flag=auto;
